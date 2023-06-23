@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block conteudo %}
+    <title>Cadastro de TOPIKS</title>
+<div id="cadastro">
+   
+    <form method="POST" action="/cadastrar">
+        <label for="modelo">Modelo:</label>
+        <input type="text" id="modelo" name="modelo" required><br><br>
+
+        <label for="placa">Placa:</label>
+        <input type="text" id="placa" name="placa" required><br><br>
+
+        <input type="submit" value="Cadastrar">
+    </form>
+
+</div>
+{% endblock %}

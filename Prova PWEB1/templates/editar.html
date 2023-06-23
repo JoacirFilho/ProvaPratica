@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block conteudo %}
+
+    <title>Editar topik</title>
+<div id="editar">
+    <form action="{{topiks[placa]}}" method="POST">
+        <label for="modelo">Modelo:</label>
+        <input type="text" id="modelo" name="modelo" required
+        name = "modelo" value = "{{topiks[placa]}}">
+        <br><br>
+
+        <label for="placa">Placa:</label>
+        <input type="text" id="placa" name="placa" required
+        name = "placa" value = "{{topiks[placa]}}">
+        <br><br>
+
+        <input type="submit" value="Salvar">
+    </form>
+</div>
+{% endblock %}

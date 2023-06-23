@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% block conteudo %}
+
+    <h1>Topiks Cadastradas</h1>
+    <br>
+    <br>
+<div id="lista">
+    <table>
+        <tr>
+            <th>Modelo</th>
+            <th>Placa</th>
+            <th>Ações</th>
+        </tr>
+        {% for topiks in topiks %}
+        <tr>
+            <td>{{ topiks.modelo }}</td>
+            <td>{{ topiks.placa }}</td>
+                <td>
+                <a href="/editar/{{ loop.index0 }}">Editar</a>|
+                <a href="/excluir/{{ loop.index0 }}">Excluir</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+    <br><br>
+    <a class="Cadastrar"
+            href="/cadastrar">Cadastrar Nova
+    </a>
+
+</div>
+{% endblock %}
